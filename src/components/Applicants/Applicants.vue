@@ -12,7 +12,7 @@
           <ul class="applicant-list" v-if="people.length > 0">
             <router-link :to="{name: 'results', params: {peep: peep}}" v-for="peep in sortedApplicants">
               <li class="applicant"
-              v-bind:class="{ high: peep.score >= 80, med: peep.score >= 70, low: peep.score >= 60}" v-if="peep.score >= filterPercent">
+              v-bind:class="{ high: peep.score >= 80, med: peep.score >= 64, low: peep.score >= 60}" v-if="peep.score >= filterPercent">
                 <h2>{{peep.first_name}} {{peep.last_name}}</h2>
                 <p class="percent"><i-count-up
                   :start="0"

@@ -1,6 +1,6 @@
 <template>
   <div id="hello-page">
-  	<img src="assets/deephirelogo.svg">
+  	<img src="./deephirelogo.svg">
     <h1>Welcome to Deep Hire</h1>
     <p>View my <router-link to="/jobs">job listings</router-link>.</p>
   </div>
