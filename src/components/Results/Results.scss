@@ -1,0 +1,137 @@
+.big-header {
+	color: #48CF8F; 
+	margin-top: 80px;
+	font-size: 108px;
+}
+
+#results-page {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #206168;
+}
+
+.left-col {
+	width: 40%;
+	padding-left: 60px;
+	padding-right: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	p {
+		text-align: left;
+		font-size: 24px;
+		margin-bottom: 0;
+		margin-left: 10px;
+	}
+
+	h2 {
+		margin-top: 0;
+		font-weight: 400;
+		text-align: left;
+		font-size: 64px;
+		margin-left: 10px;
+		color: #48CF8F;
+		text-shadow: 2px 2px 2px rgba(21,63,67, 0.5);
+	}
+
+	.percent-sign {
+		font-size: 48px;
+	}
+}
+
+.right-col {
+	width: 60%;
+	background-color: rgba(21,63,67, 1.0);
+}
+
+.flex-row {
+	height: 100vh;
+}
+
+.results-container {
+	height: calc(100% - 120px);
+	margin: 80px 40px 0;
+
+}
+
+.question-list {
+	list-style: none;
+	height: 100%;
+	overflow-y: scroll;
+	overflow: visible;
+}
+
+p {
+	font-family: sans-serif;
+}
+
+.question {
+	* {
+		color: #48CF8F;
+	}
+	color: #48CF8F;
+
+	padding: 40px 0px 20px;
+	margin-bottom: 0px;
+	text-align: left;
+	border-bottom: 1px solid #3B9399;
+	display: flex;
+
+	&:first-of-type {
+		padding-top: 20px;
+	}
+
+	display: flex;
+	justify-content: space-between;
+
+	h2 {
+		font-family: sans-serif;	
+		font-weight: 400;
+		margin-bottom: 0;
+		display: inline-block;
+		width: auto;
+	}
+
+	.percent-container {
+		position: relative;
+	}
+
+	.percent {
+		font-size: 20px;
+		font-weight: 300;
+		display: inline-block;
+		margin: 0;
+		width: 50px;
+		position: absolute;
+		bottom: -12px;
+		right: 0;
+	}
+
+	.percent-sign {
+		font-size: 16px;
+	}
+}
+
+.back-button {
+	margin-top: 0;
+	cursor: pointer;
+	width: 30px;
+	position: absolute;
+	top: 0%;
+	left: 0px;
+	color: #48CF8F;
+	font-weight: 300;
+	font-size: 64px !important;
+	overflow: visible;
+	transform: translateY(0px);
+	text-shadow: 1px 1px 1px rgba(21,63,67, 0.3);
+	vertical-align: top;
+	transition: 0.2s all ease;
+
+	&:hover {
+		transform: translateY(4px);
+		text-shadow: 2px 2px 1px rgba(21,63,67, 0.5);
+	}
+}
