@@ -1,23 +1,21 @@
 <template>
-  <g>
-    <polygon :points="points"></polygon>
-    <circle cx="100" cy="100" r="80"></circle>
-    <axis-label
-      v-for="(stat, index) in stats"
-      :stat="stat"
-      :index="index"
-      :total="stats.length">
-    </axis-label>
-  </g>
+  <svg>
+    <g>
+      <polygon :points="points"></polygon>
+      <circle cx="100" cy="100" r="80"></circle>
+      <axis-label
+        v-for="(stat, index) in stats"
+        :stat="stat"
+        :index="index"
+        :total="stats.length">
+      </axis-label>
+    </g>
+  </svg>
 </template>
 
-<style>
-  body {
-    font-family: Helvetica Neue, Arial, sans-serif;
-  }
-
+<style scoped>
   polygon {
-    fill: #42b983;
+    fill: #48CF8F;
     opacity: .75;
   }
 
@@ -28,8 +26,8 @@
 
   text {
     font-family: Helvetica Neue, Arial, sans-serif;
-    font-size: 10px;
-    fill: #666;
+    font-size: 18px;
+    fill: #FFF;
   }
 
   label {
@@ -109,7 +107,7 @@ export default {
       computed: {
         point: function () {
           return valueToPoint(
-            +this.stat.value + 10,
+            +this.stat.value + 50,
             this.index,
             this.total
           )

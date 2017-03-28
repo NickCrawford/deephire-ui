@@ -3,7 +3,7 @@
     <div class="flex-row">
       <div class="left-col">
         <!-- <p class="back-button">Back</p> -->
-        <h1 class="big-header">{{ first_name }} {{ last_name }}</h1>
+        <h1 class="big-header">{{ first_name || 'Results'}} {{ last_name }}</h1>
         <div class="flex-row">
           <div>
             <p>Average<br>Culture Fit:</p>
@@ -68,12 +68,11 @@ export default {
         suffix: ''
       },
       stats: [
-        { label: 'A', value: 100 },
-        { label: 'B', value: 100 },
-        { label: 'C', value: 100 },
-        { label: 'D', value: 100 },
-        { label: 'E', value: 100 },
-        { label: 'F', value: 100 }
+        { label: 'Anger', value: this.$route.params.peep.pairs[0].emotions.anger / 1.0 * 200 },
+        { label: 'Joy', value: this.$route.params.peep.pairs[0].emotions.joy / 1.0 * 200 },
+        { label: 'Fear', value: this.$route.params.peep.pairs[0].emotions.fear / 1.0 * 200 },
+        { label: 'Sadness', value: this.$route.params.peep.pairs[0].emotions.sadness / 1.0 * 200 },
+        { label: 'Disgust', value: this.$route.params.peep.pairs[0].emotions.disgust / 1.0 * 200 }
       ]
     }
   }
